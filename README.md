@@ -95,10 +95,15 @@ Le projet est divisé en deux parties :
 ## Conclusion
 
 Ce projet montre comment combiner Spring Boot pour le backend et Angular pour le frontend dans une application complète. Il couvre des concepts tels que la sécurité, la gestion des données, les interactions frontend-backend et l'utilisation de composants modernes pour offrir une expérience utilisateur fluide.
+# Project
+![Alt text](/images/1.png)
+![Alt text](/images/2.png)
+![Alt text](/images/3.png)
+![Alt text](/images/4.png)
+![Alt text](/images/5.png)
+![Alt text](/images/6.png)
 
 # Lien
 1. https://www.youtube.com/watch?v=oTuAXfD2M1g
 2. https://www.youtube.com/watch?v=QqmoMDGr3Ww
 3. https://www.youtube.com/watch?v=AARjOq9VzgQ
-
-![Alt text](/images/1.png)
