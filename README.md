@@ -101,4 +101,4 @@ Ce projet montre comment combiner Spring Boot pour le backend et Angular pour le
 2. https://www.youtube.com/watch?v=QqmoMDGr3Ww
 3. https://www.youtube.com/watch?v=AARjOq9VzgQ
 
-![Alt text](relative%20path/images/1.png)
+![Alt text](/images/1.png)
