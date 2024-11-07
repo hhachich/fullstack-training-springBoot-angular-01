@@ -1,0 +1,95 @@
+<div class="container">
+    <!-- <mat-card class="student-card">
+        <mat-card-header>
+            <mat-card-title>
+                Students
+            </mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Code</th>
+                        <th>Program ID</th>
+                        <th>Payments</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (student of students; track $index) {
+                    <tr>
+                        <td>{{student.id}}</td>
+                        <td>{{student.firstName}}</td>
+                        <td>{{student.lastName}}</td>
+                        <td>{{student.code}}</td>
+                        <td>{{student.programId}}</td>
+                        <td>
+                            <button (click)="studentPayments(student)" mat-raised-button
+                                color="primary">Payments</button>
+                        </td>
+
+                    </tr>
+                    }
+
+                </tbody>
+            </table>
+        </mat-card-content>
+    </mat-card> -->
+
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                Students
+            </mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <div class="mat-elevation-z8">
+                <table matSort mat-table [dataSource]="dataSource">
+
+                    <ng-container matColumnDef="id">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header>ID </th>
+                        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="firstName">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> First Name </th>
+                        <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="lastName">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Last Name </th>
+                        <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="code">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Code </th>
+                        <td mat-cell *matCellDef="let element"> {{element.code}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="programId">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Program ID </th>
+                        <td mat-cell *matCellDef="let element"> {{element.programId}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="payments">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Payments </th>
+                        <td mat-cell *matCellDef="let element">
+                            <button (click)="studentPayments( element)" mat-raised-button
+                                color="primary">Payments</button>
+                        </td>
+                    </ng-container>
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+                <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons
+                    aria-label="Select page of periodic elements">
+                </mat-paginator>
+            </div>
+        </mat-card-content>
+    </mat-card>
+
+</div>
